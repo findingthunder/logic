@@ -1,0 +1,18 @@
+.u-section-1 .u-sheet-1 {
+  min-height: 400px;
+}
+.u-section-1 .u-btn-1 {
+  /* font-size: 4.5rem; */
+  font-family: "Architects Daughter";
+  background-image: linear-gradient(#47c9bd, #478ac9);
+  /* margin: 103px auto 0 15px; */
+  /* padding: 43px 105px; */
+}
+
+.u-section-1 .u-btn-2 {
+  /* font-size: 4.5rem; */
+  font-family: "Architects Daughter";
+  background-image: linear-gradient(#478ac9, #47c9bd);
+  /* margin: -187px 0 0 auto; */
+  /* padding: 43px 105px; */
+}
