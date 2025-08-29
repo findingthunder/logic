@@ -159,3 +159,14 @@
     margin-bottom: 30px;
   }
 }
+/* Make sidenav slide in from the right */
+.u-sidenav {
+  left: auto;                     /* disable left side */
+  right: 0;                       /* attach to right edge */
+  transform: translateX(100%);    /* hidden off-screen to the right */
+  transition: transform 0.3s ease-out;
+}
+
+.u-sidenav.u-menu-open {
+  transform: translateX(0);       /* slide into view */
+}
