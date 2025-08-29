@@ -46970,3 +46970,25 @@ a.u-link.u-text-hover-color-var:hover {
  /*begin-variables base-font-size*/ 
  html { font-size: 16px; }
  /*end-variables base-font-size*/
+
+
+/* === Custom override: make sidenav slide in from right === */
+.u-sidenav {
+  position: fixed !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  left: auto !important;          /* cancel left anchoring */
+  right: 0 !important;            /* attach to right edge */
+  width: 250px !important;        /* change if you want wider/narrower */
+  height: 100% !important;
+
+  transform: translateX(100%) !important;  /* hidden off-screen to the right */
+  transition: transform 0.3s ease-out !important;
+
+  pointer-events: none !important; /* prevent early clicks */
+}
+
+.u-sidenav.u-menu-open {
+  transform: translateX(0) !important;  /* fully visible */
+  pointer-events: auto !important;      /* clickable only when visible */
+}
