@@ -160,19 +160,4 @@
   }
 }
 
-/* 🔒 Override sidenav to slide in from the right edge */
-.u-sidenav {
-  position: fixed !important;
-  top: 0 !important;
-  left: auto !important;         /* disable left side */
-  right: 0 !important;           /* stick to the right edge */
-  width: 250px !important;       /* set your desired width */
-  height: 100% !important;
-  transform: translateX(100%) !important;  /* start hidden completely off-screen */
-  transition: transform 0.3s ease-out !important;
-}
-
-.u-sidenav.u-menu-open {
-  transform: translateX(0) !important;     /* fully visible */
-}
 
