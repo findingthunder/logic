@@ -46972,23 +46972,37 @@ a.u-link.u-text-hover-color-var:hover {
  /*end-variables base-font-size*/
 
 
-/* === Custom override: make sidenav slide in from right === */
+
+/* === Custom override: sidenav always slides from right === */
 .u-sidenav {
   position: fixed !important;
   top: 0 !important;
   bottom: 0 !important;
-  left: auto !important;          /* cancel left anchoring */
-  right: 0 !important;            /* attach to right edge */
-  width: 250px !important;        /* change if you want wider/narrower */
+  left: auto !important;         
+  right: 0 !important;           
+  width: 250px !important;       /* adjust to your liking */
+  max-width: 80% !important;     /* safety for smaller screens */
   height: 100% !important;
 
-  transform: translateX(100%) !important;  /* hidden off-screen to the right */
+  transform: translateX(100%) !important; 
   transition: transform 0.3s ease-out !important;
 
-  pointer-events: none !important; /* prevent early clicks */
+  pointer-events: none !important;
 }
 
 .u-sidenav.u-menu-open {
-  transform: translateX(0) !important;  /* fully visible */
-  pointer-events: auto !important;      /* clickable only when visible */
+  transform: translateX(0) !important;
+  pointer-events: auto !important;
 }
+
+/* Extra: force mobile collapse menus too */
+.u-nav-container-collapse .u-sidenav {
+  left: auto !important;
+  right: 0 !important;
+  transform: translateX(100%) !important;
+}
+
+.u-nav-container-collapse .u-sidenav.u-menu-open {
+  transform: translateX(0) !important;
+}
+
