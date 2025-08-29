@@ -46970,3 +46970,13 @@ a.u-link.u-text-hover-color-var:hover {
  /*begin-variables base-font-size*/ 
  html { font-size: 16px; }
  /*end-variables base-font-size*/
+
+.u-sidenav {
+  left: auto !important;
+  right: 0 !important;
+  transform: translateX(100%) !important;
+}
+
+.u-sidenav.u-menu-open {
+  transform: translateX(0) !important;
+}
